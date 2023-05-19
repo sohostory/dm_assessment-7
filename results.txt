@@ -1,0 +1,80 @@
+Results for the extraLargeArray
+insert 733.302 ms
+append 2.8545 ms
+
+Results for the extraLargeArray
+insert 705.443375 ms
+append 1.611667 ms
+
+Results for the extraLargeArray
+insert 706.607667 ms
+append 1.710125 ms
+
+
+Results for the tinyArray
+insert 15.458 μs
+append 43.75 μs
+
+Results for the tinyArray
+insert 14.916 μs
+append 44.25 μs
+
+Results for the tinyArray
+insert 15.791 μs
+append 50.084 μs
+
+Results for the smallArray
+insert 23.042 μs
+append 47.209 μs
+
+Results for the smallArray
+insert 24.375 μs
+append 56.125 μs
+
+Results for the smallArray
+insert 22.833 μs
+append 52.167 μs
+
+Results for the mediumArray
+insert 131.583 μs
+append 81.834 μs
+
+Results for the mediumArray
+insert 139.084 μs
+append 92.375 μs
+
+Results for the mediumArray
+insert 140.417 μs
+append 104.542 μs
+
+Results for the largeArray
+insert 6.150166 ms
+append 457.375 μs
+
+Results for the largeArray
+insert 6.629708 ms
+append 433.542 μs
+
+Results for the largeArray
+insert 6.562 ms
+append 475.917 μs
+
+Results for the extraLargeArray
+insert 713.364166 ms
+append 1.580125 ms
+
+Results for the extraLargeArray
+insert 705.709459 ms
+append 1.631584 ms
+
+Results for the extraLargeArray
+insert 708.38575 ms
+append 1.622166 ms
+
+Insert (unshift) option is optimal up to smallArray. However anything larger than that, the performance significantly drops.
+As you scale up, unshift is not a good option to use. With extraLargeArray, it takes 700 times longer than append (push).
+However, if you must add the value at the front of the array, this may have to be done.
+
+Extra credit: unshift is O(n) and push is O(1)
+ The reason for this is when you unshift, it will add the value to the front of the array and rellocate memory and copy teh data over.
+ With push, since it adds to teh end of the array, it rarely needs to rellcate memory and copy over all the data.
